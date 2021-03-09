@@ -11,7 +11,7 @@ const PostDetail = () => {
         fetch(url)
             .then(Response => Response.json())
             .then(data => setPost(data))
-    }, [])
+    }, [id])
 
 
     const [comments, setComments] = useState([]);
@@ -20,7 +20,7 @@ const PostDetail = () => {
         fetch(url)
             .then(Response => Response.json())
             .then(data => setComments(data))
-    }, [])
+    }, [id])
     return (
         <div>
             <h3>this is post detail {id}</h3>
